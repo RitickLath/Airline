@@ -1,11 +1,10 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-
-const { PORT } = require("./config/serverConfig");
+const { PORT } = require("./config/serverConfig"); // port comes from serverconfig
 
 const setupAndStartServer = (async = () => {
   const app = express();
-
+  console.log(PORT);
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({ extended: true }));
 
